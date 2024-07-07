@@ -37,7 +37,7 @@ export function UserDropdown() {
             <DropdownMenuTrigger asChild>
                 <Button asChild variant='ghost' size={'sm'}>
                     <Avatar alt="Zach Nugent's Avatar">
-                        <AvatarImage source={{ uri: apiUrl + user?.photoURL.url }} />
+                        <AvatarImage source={{ uri: apiUrl! + user?.photoURL.url }} />
                         <AvatarFallback>
                             <Text>{getNameInitials(user?.displayName)}</Text>
                         </AvatarFallback>
