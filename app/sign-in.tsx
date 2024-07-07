@@ -5,6 +5,7 @@ import { Text } from '~/components/ui/text';
 import { useSession } from '~/lib/ctx';
 import { useState } from 'react';
 import { Input } from '~/components/ui/input';
+import { Label } from '~/components/ui/label';
 
 export default function SignIn() {
   const { signIn } = useSession();
@@ -23,6 +24,7 @@ export default function SignIn() {
 
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Label nativeID='email'>Email</Label>
       <Input
         style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginBottom: 12, width: '80%', padding: 8 }}
         placeholder="Email"
@@ -32,6 +34,7 @@ export default function SignIn() {
         keyboardType="email-address"
         autoCapitalize="none"
       />
+      <Label nativeID='password'>Password</Label>
       <Input
         style={{ height: 40, borderColor: 'gray', borderWidth: 1, marginBottom: 12, width: '80%', padding: 8 }}
         placeholder="Password"
@@ -44,14 +47,6 @@ export default function SignIn() {
       <Button asChild onPress={handleSignIn}>
         <Text>
           Sign In
-        </Text>
-      </Button>
-      <Button asChild onPress={() => {
-        setIdentifier("002@m-inno.com")
-        setPassword("Pass002")
-      }}>
-        <Text>
-          prefill credentials
         </Text>
       </Button>
     </View>
