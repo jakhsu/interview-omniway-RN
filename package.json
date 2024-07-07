@@ -1,7 +1,7 @@
 {
   "name": "interview-react-native-omniway",
   "main": "index.js",
-  "version": "1.0.0",
+  "version": "0.2",
   "scripts": {
     "dev": "expo start -c --ios",
     "dev:web": "expo start -c --web",
